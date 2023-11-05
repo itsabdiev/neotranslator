@@ -1,4 +1,4 @@
-# Notepad
+# Neotranslator
 
 NeoTranslator - переводчик 
 
