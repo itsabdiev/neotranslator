@@ -1,6 +1,7 @@
 # Neotranslator
 
 NeoTranslator - переводчик 
+![Oops](https://res.cloudinary.com/benomad/image/upload/v1699178384/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-11-05_155929_s65yyr.png)
 
 ## Подробная информация
 
