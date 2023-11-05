@@ -4,6 +4,38 @@ import { useState } from 'react';
 import translateText from './GoogleTranslate';
 
 function App() {
+  const languageOptions = [
+  { value: "es", label: "Spanish" },
+  { value: "fr", label: "French" },
+  { value: "en", label: "English" },
+  { value: "ky", label: "Kyrgyz" },
+  { value: "ru", label: "Russian" },
+  { value: "de", label: "German" },
+  { value: "it", label: "Italian" },
+  { value: "pt", label: "Portuguese" },
+  { value: "zh-CN", label: "Chinese (Simplified)" },
+  { value: "zh-TW", label: "Chinese (Traditional)" },
+  { value: "ja", label: "Japanese" },
+  { value: "ko", label: "Korean" },
+  { value: "ar", label: "Arabic" },
+  { value: "tr", label: "Turkish" },
+  { value: "hi", label: "Hindi" },
+  { value: "ur", label: "Urdu" },
+  { value: "fa", label: "Persian" },
+  { value: "nl", label: "Dutch" },
+  { value: "sv", label: "Swedish" },
+  { value: "fi", label: "Finnish" },
+  { value: "el", label: "Greek" },
+  { value: "pl", label: "Polish" },
+  { value: "he", label: "Hebrew" },
+  { value: "th", label: "Thai" },
+  { value: "vi", label: "Vietnamese" },
+  { value: "id", label: "Indonesian" },
+  { value: "ms", label: "Malay" },
+  { value: "fil", label: "Filipino" },
+  { value: "kk", label: "Kazakh (Kazakh Cyrillic script)" },
+  { value: "uz", label: "Uzbek (Uzbek Latin script)" },
+];
   const [inputText, setInputText] = useState('');
   const [targetLanguage, setTargetLanguage] = useState('es');
   const [sourceLanguage, setSourceLanguage] = useState('es');
@@ -26,74 +58,21 @@ function App() {
 />
 </div>
         From :
-        <select
-        value={sourceLanguage}
-        onChange={(e) => setSourceLanguage(e.target.value)}>
-          <option value="es">Spanish</option>
-          <option value="fr">French</option>
-          <option value="en">English</option>
-          <option value="ky">Kyrgyz</option>
-          <option value="ru">Russian</option>
-          <option value="de">German</option>
-          <option value="it">Italian</option>
-          <option value="pt">Portuguese</option>
-          <option value="zh-CN">Chinese (Simplified)</option>
-          <option value="zh-TW">Chinese (Traditional)</option>
-          <option value="ja">Japanese</option>
-          <option value="ko">Korean</option>
-          <option value="ar">Arabic</option>
-          <option value="tr">Turkish</option>
-          <option value="hi">Hindi</option>
-          <option value="ur">Urdu</option>
-          <option value="fa">Persian</option>
-          <option value="nl">Dutch</option>
-          <option value="sv">Swedish</option>
-          <option value="fi">Finnish</option>
-          <option value="el">Greek</option>
-          <option value="pl">Polish</option>
-          <option value="he">Hebrew</option>
-          <option value="th">Thai</option>
-          <option value="vi">Vietnamese</option>
-          <option value="id">Indonesian</option>
-          <option value="ms">Malay</option>
-          <option value="fil">Filipino</option>
-          <option value="kk">Kazakh (Kazakh Cyrillic script)</option>
-          <option value="uz">Uzbek (Uzbek Latin script)</option>
-        </select>
+        <select value={sourceLanguage} onChange={(e) => setSourceLanguage(e.target.value)}>
+      {languageOptions.map((option) => (
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
+      )}
+    </select>
         To :
-        <select value={targetLanguage}
-        onChange={(e) => setTargetLanguage(e.target.value)}>
-          <option value="es">Spanish</option>
-          <option value="fr">French</option>
-          <option value="en">English</option>
-          <option value="ky">Kyrgyz</option>
-          <option value="ru">Russian</option>
-          <option value="de">German</option>
-          <option value="it">Italian</option>
-          <option value="pt">Portuguese</option>
-          <option value="zh-CN">Chinese (Simplified)</option>
-          <option value="zh-TW">Chinese (Traditional)</option>
-          <option value="ja">Japanese</option>
-          <option value="ko">Korean</option>
-          <option value="ar">Arabic</option>
-          <option value="tr">Turkish</option>
-          <option value="hi">Hindi</option>
-          <option value="ur">Urdu</option>
-          <option value="fa">Persian</option>
-          <option value="nl">Dutch</option>
-          <option value="sv">Swedish</option>
-          <option value="fi">Finnish</option>
-          <option value="el">Greek</option>
-          <option value="pl">Polish</option>
-          <option value="he">Hebrew</option>
-          <option value="th">Thai</option>
-          <option value="vi">Vietnamese</option>
-          <option value="id">Indonesian</option>
-          <option value="ms">Malay</option>
-          <option value="fil">Filipino</option>
-          <option value="kk">Kazakh (Kazakh Cyrillic script)</option>
-          <option value="uz">Uzbek (Uzbek Latin script)</option>
-        </select>
+        <select value={targetLanguage} onChange={(e) => setTargetLanguage(e.target.value)}>
+      {languageOptions.map((option) => (
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
+      )}
+    </select>
       </div>
       <div>
       <textarea cols={50} rows={8}
